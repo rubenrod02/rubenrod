@@ -1,0 +1,28 @@
+
+  
+
+Ruben Rodriguez
+
+305 409 822
+
+
+Project 4 Report
+
+
+
+1. StreetMap load();
+
+If the street map holds N geo coordinates and each geo coordinate is associated with S street segments on average the big O is O(NS).
+
+2. StreetMap getSegmentThatStartWith();
+
+If the street map holds N geo coordinates and each geo coordinate is associated with S street segments, on average the big O is O(S).
+
+
+3. PointToPointRouter generatePointToPointRouter();
+   
+In my A* search algorithm, I used a vector to keep track of all the starting points in the map through the getSegmentsThatStartWith() function. I also used a priority-queue of pairs to push my street segments coordinates as well as the tentative distance, into and to efficiently explore the shortest paths, since I made sure my priority queue stored them from the smallest to the biggest. This pair data structure is what qualified as my heuristic value, since it allowed me to "guess" which point is more worth exploring.
+
+
+4. DeliveryOptimizer optimizeDeliveryOrder();
+  If my Street map holds N geo coordinates then the big O is O(N!). I was not able to finish this implementation, but the way I had planned, it would go through each coordinate and calculate the crows distance before comparing it with all the other coordinates and adjusting
